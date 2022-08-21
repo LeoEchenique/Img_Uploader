@@ -14,7 +14,7 @@ export default function Drag({setterLoader, setterFinal, setterData}) {
 
     const ref = useRef(null);
     
-    const PORT = process.env.PORT;
+    const PORT = "https://tranquil-depths-32422.herokuapp.com/";
     const [files, setFiles] = useState([]);
     //  const [fileName, setFileName] = useState([]);
     
