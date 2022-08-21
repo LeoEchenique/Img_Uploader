@@ -1,39 +1,31 @@
 const { Router } = require('express');
 const axios = require("axios")
-const { Image } = require("../../db.js")
+/* const { Image } = require("../../db.js") */
 const router = Router();
-
+const mongoose = require("mongoose");
+const image = require("../../models/Image.js")
 
 router.get("/", async (req, res) => {
 
-    const { url } = req.body;
-    const TBfound = await Image.findOne({
-        where: {
-            name: name
-        }
-    });
-    if (TBfound) return res.status(200).send(TBfound)
-    else return res.send("An error ocurred, please try again.")
+    let img = await image.find();
+    /* THIS BRINGS ALL THE IMAGES */
+    res.send(img)
+
 })
 
 
 
 router.post("/upload", async (req, res) => {
-
     const { link, name } = req.body;
 
-    const isCreated = await Image.findOne({
-        where: {
-            name: name
-        }
-    });
-    if (isCreated) return res.status(200).send(isCreated)
+    const img = await image.create({ name: name });
+    try {
+        img.save().then((img) => res.status(201).send({ img }))
+    } catch (error) {
+        console.error(error)
+        res.send(404).send("nop")
+    }
 
-    const img = await Image.create({
-        name,
-        url: link
-    })
-    return res.status(201).send(img)
 
 
 })

@@ -1,6 +1,6 @@
 
 import React from "react"
-import Filer from "./components/FileUpload";
+import Filer from "./components/entry/FileUpload";
 
 
 function App() {
@@ -9,7 +9,6 @@ function App() {
   return (
     <div className="App">
       <Filer />
-
     </div>
   );
 }
