@@ -14,7 +14,7 @@ export default function Drag({setterLoader, setterFinal, setterData}) {
 
     const ref = useRef(null);
     
-
+    const PORT = process.env.PORT;
     const [files, setFiles] = useState([]);
     //  const [fileName, setFileName] = useState([]);
     
@@ -63,7 +63,7 @@ export default function Drag({setterLoader, setterFinal, setterData}) {
                 let res = await axios.post("https://api.cloudinary.com/v1_1/leo-echenique/image/upload", formData);
                 setUploadedFiles((prev)=>[...prev, res.data.url])
                 setterData(res.data.url)
-               axios.post("/upload", { link: res.data.url, name: res.data.original_filename }) 
+               axios.post(`${PORT}/upload`, { link: res.data.url, name: res.data.original_filename }) 
               
            }) 
            
