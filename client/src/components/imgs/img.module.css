@@ -1,0 +1,41 @@
+
+.img_container{
+    display: flex;
+    height:100%;
+    width: 100vw;
+ 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.img{
+    width: max-content;
+    height: max-content;
+    object-fit: contain;
+    max-width: 400px;
+    max-height: 400px;
+    margin: 20px;
+    
+}
+.title{
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 27px;
+ letter-spacing: -0.035em;
+    color: #4F4F4F;
+    margin-top: -20px;
+    margin-bottom: 80px;
+}
+.card{
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.buton{
+    margin-left: 20px;
+    margin-top: 20px;  
+}

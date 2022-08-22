@@ -1,0 +1,19 @@
+.all{
+
+    
+
+background: #2F80ED;
+margin-right:   320px ;
+border-radius: 8px;
+cursor: pointer;
+padding: 10px;
+border: none;
+font-family: 'Noto Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 16px;
+letter-spacing: -0.035em;
+color: #FFFFFF;
+text-decoration: none;
+}

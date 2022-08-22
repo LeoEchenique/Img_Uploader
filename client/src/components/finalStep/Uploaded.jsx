@@ -2,11 +2,14 @@ import React from "react";
 import style from "./Uploaded.module.css"
 import icon from "./ok.png"
 
+import Buton from "../buttons/Butons.jsx"
+
 
 export default function Uploaded({data}) {
 
 
     const handleLabel = (e) => {
+        console.log(window.location.href)
         let elem = document.getElementById(e.target.value)
         elem.style.background = "green";
         elem.innerText="Copied"
@@ -16,7 +19,11 @@ export default function Uploaded({data}) {
             elem.innerText="Copy"  
         }, 2000);
     }
+
+
     return (
+        <div>
+            <Buton home={true} />
         <div className={style.container}>
             <div className={style.div_icon}>
                 <img src={icon} alt="" className={style.img} />
@@ -49,6 +56,7 @@ export default function Uploaded({data}) {
                     })
                     : null}
             </div>
-        </div>
+            </div>
+    </div>
     )
 }

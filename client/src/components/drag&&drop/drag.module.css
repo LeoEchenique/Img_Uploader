@@ -15,7 +15,6 @@ body{
     justify-content: center;
     min-height: 100vh;
     flex-direction: column;
-    
 }
 
 .container{
@@ -43,33 +42,24 @@ body{
 .h3{
     margin-bottom: 20px;
     font-weight: 500;
-
 }
 
 .header{
-
-margin-top: 370px;
+margin-top: 20px;
 font-family: 'Poppins';
 font-style: normal;
 font-weight: 500;
 font-size: 12px;
 line-height: 18px;
-margin-bottom: 200px;
 /* identical to box height */
 letter-spacing: -0.035em;
-
 /* Gray 4 */
 color: #BDBDBD;
-
-
+}
+.icon{
+    margin-top: 50px;
 }
 
-/* .Drag .support{
-    font-size: 20px;
-    font-weight: 500;
-    color:gray;
-    margin: 10px 0 15px 0;
-} */
 
 .Drag .button{
     font-size: 20px;
@@ -98,16 +88,14 @@ input[type='file'] {
 
 .filename{
     display: none;
-
 }
 .labelfile{
     background: #2F80ED;
     text-align: center;
     border-radius: 8px;
     cursor: pointer;
-    position: absolute;
-    top: 644px;
-    right: 907px;
+    margin-left: 130.5px;
+    
     width: 101px;
     height: 31.98px; 
     padding: 7px;
@@ -116,11 +104,8 @@ input[type='file'] {
     font-weight: 500;
     font-size: 12px;
     line-height: 16px;
-   
     letter-spacing: -0.035em;
     color: #FFFFFF;
-
-
 }
 
 .h3{
@@ -141,8 +126,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 10px;
 line-height: 15px;
-
-/* identical to box height */
+/* identical to box eight */
 text-align: center;
 letter-spacing: -0.035em;
 margin-left: 110px;
@@ -151,32 +135,21 @@ color: #828282;
 
 }
 
-.or{
-    position: absolute;
-    width: 14px;
-    height: 17.99px;
-    left: 956.82px;
-    top: 612.78px;
-    font-family: 'Poppins';
-font-style: normal;
-font-weight: 500;
-font-size: 12px;
-line-height: 18px;
 
-/* identical to box height */
-text-align: center;
-letter-spacing: -0.035em;
-
-/* Gray 4 */
-color: #BDBDBD;
+.ordiv{
+    display: flex;
+    justify-content: center;
+    margin-top: -30px;    
 }
 
-.icon{
- 
-    
-    position: absolute;
-    left: 46.5%;
-    right: 60.02%;
-    top: 47.94%;
-    bottom: 48.88%;
+.or{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: -0.035em;
+    color: #BDBDBD;
+    margin-bottom: 8px;
 }

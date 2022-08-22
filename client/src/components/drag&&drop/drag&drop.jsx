@@ -3,12 +3,10 @@ import style from "../drag&&drop/drag.module.css"
 import { useState } from "react";
 import axios from "axios";
 import { useRef } from "react";
-/* import RingLoader from "react-spinners/RingLoader"; */
 import { useEffect } from "react";
-/* import Loading from "../loading/Loader.jsx";
-import Uploaded from "../finalStep/Uploaded.jsx"; */
-/* import img from "../img.png"; */
 import imagen from "../image.svg";
+
+
 
 export default function Drag({setterLoader, setterFinal, setterData}) {
 
@@ -88,9 +86,9 @@ export default function Drag({setterLoader, setterFinal, setterData}) {
 }
 
 
-    return (
-        
 
+    return (
+        <div>
         <div className={style.container}>
             <h3 className={style.h3}>Upload your image</h3>
          
@@ -100,14 +98,21 @@ export default function Drag({setterLoader, setterFinal, setterData}) {
                 <img src={imagen} alt="" />
                 </div>
                 <span className={style.header}> Drag & Drop your image here</span>
-               
-                <span className={style.or}>Or </span>
-               
             </div>
+            <div className={style.ordiv}>
+            <span className={style.or}>Or </span>
+
+            </div>
+
+
+       
             <input ref={ref} multiple className={style.filename} id="filename" onChange={handleDrop2} type="file"></input> 
             <label htmlFor="filename" className={style.labelfile}> Choose a file </label>
    
           
         </div>
+        </div>
+
+        
     )
 }
