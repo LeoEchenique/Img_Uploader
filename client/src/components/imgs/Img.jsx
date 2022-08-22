@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState } from "react";
 import style from "./img.module.css";
 import Buton from "../buttons/Butons"
+import {Link} from "react-router-dom";
 export default function Img() {
     
     const [images, setImages] = useState();
@@ -32,7 +33,8 @@ export default function Img() {
                     images.map(e => {
                         return (
                             <div key={e.id} className={style.card}>
-                                <img  key={e.id} className={style.img}  src={e.name} alt="" />
+                                <a href={e.name}  target="_blank" > <img  key={e.id} className={style.img}  src={e.name} alt="" />  </a>
+                                
                             </div>
                      ) 
                     })
